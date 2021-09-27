@@ -61,4 +61,11 @@ body {
  font-size: 2rem;
 }
 }
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0 ;
+  line-height: 2;
+}
+
 
