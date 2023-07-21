@@ -1,3 +1,5 @@
+alert("Please keep in mind that in order to advance to the next levels you have to remember not just the current flashing sequence but all given previous sequences from the previous levels. Good luck !!!");
+
 
 var buttonColours = ["red", "blue", "green", "yellow"];
 
