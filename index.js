@@ -1,4 +1,4 @@
-alert("Please keep in mind that in order to advance to the next levels you have to remember not just the current flashing sequence but all given previous sequences from the previous levels. Good luck !!!");
+alert("Please keep in mind that in order to advance to next levels you have to remember not just the current sequence but also the ones given from the start. Good luck 🤞!!!");
 
 
 var buttonColours = ["red", "blue", "green", "yellow"];
@@ -10,15 +10,6 @@ var userClickedPattern = [];
 var level = "1";
 
 
-
-
-$(document).on('keypress',function() {
-  
-  nextSequence();
-  
-  
-  
-});
 
 $("#level-title").on("click", function (){
 
@@ -45,23 +36,16 @@ function nextSequence() {
   $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
   $('#level-title').text("level " + level ) ;
-  level++;
 
-
-  
 
   playSound(userChosenColour);
+  
   animatePress(userChosenColour);
   
-  
-
-  
-
-  
-  
-
 
 }
+
+
 
 function playSound(names) {
 
@@ -84,6 +68,8 @@ $(".btn").click(function (){
   
 });
 
+
+
 function animatePress(currentColour){
   
   $('.btn').on('click', function(){
@@ -96,13 +82,11 @@ function animatePress(currentColour){
         currentColour.removeClass("pressed");
     }, 100);
 
-});
-  
+});  
 }
 
-function checkAnswer(currentLevel){
-  
 
+function checkAnswer(currentLevel){
 
   if(userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
 
@@ -113,8 +97,8 @@ function checkAnswer(currentLevel){
     setTimeout(function () {
       nextSequence();
     }, 1000);
+    level++;
   }  
-
   }
   
   else {
@@ -131,16 +115,7 @@ function checkAnswer(currentLevel){
    $("h1").text("Game Over, Press Any Key or click here to Restart");
 
    startOver();
-
-  
-
    
-
-
-
-
-
-    
   }
 
 }
