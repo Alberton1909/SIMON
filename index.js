@@ -13,9 +13,9 @@ var level = "1";
 
 $("#level-title").on("click", function (){
 
-  nextSequence();
-
-
+  setTimeout(function(){
+     nextSequence();
+    }, 1500);
 });
 
 
@@ -42,7 +42,6 @@ function nextSequence() {
   
   animatePress(userChosenColour);
   
-
 }
 
 
@@ -112,7 +111,7 @@ function checkAnswer(currentLevel){
       $("body").removeClass("game-over");
     }, 200);
 
-   $("h1").text("Game Over, Press Any Key or click here to Restart");
+   $("h1").text("Game Over, click here to Restart");
 
    startOver();
    
